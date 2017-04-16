@@ -1,0 +1,180 @@
+<main ng-app="personalPage" ng-controller='ChrisController'>
+
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+
+  <div class='header' ng-if="homePage == true">
+    <button class="nameButton" ng-click="nameButtonClicked()">
+      <h2 class="name"> CHRISTOPHER PANG </h2>
+    </button>
+    <p class="myDescription"> <span style="color:#FF8C00;">Angular</span> Developer &nbsp ‧ &nbsp <span style="color:#2CBAF2;">Front End</span> Developer</p>
+    <p class="clickName"> Click My Name to Find Out More About Me</p>
+  </div>
+
+
+  <div class="aboutMeDiv" ng-if="homePage == false">
+    <div class="headerBar">
+      <h1 class="nameHeader"> CHRISTOPHER PANG </h1>
+      <hr>
+      <div class="col-md-12">
+        <div class="col-md-3">
+          <button class="selectionButton" ng-click="aboutButtonClicked(); aboutMe = true; workAndEducation = false; projects = false; contactMe = false" ng-class='{active: aboutMe}'>
+            <p class="selectionButtonText"> About </p>
+          </button>
+        </div>
+        <div class="col-md-3">
+          <button class="selectionButton" ng-click="workButtonClicked(); aboutMe = false; workAndEducation = true; projects = false; contactMe = false" ng-class='{active: workAndEducation}'>
+            <p class="selectionButtonText"> Work & Education </p>
+          </button>
+        </div>
+        <div class="col-md-3">
+          <button class="selectionButton" ng-click="projectButtonClicked(); aboutMe = false; workAndEducation = false; projects = true; contactMe = false" ng-class='{active: projects}'>
+            <p class="selectionButtonText"> Projects </p>
+          </button>
+        </div>
+        <div class="col-md-3">
+          <button class="selectionButton" ng-click="contactButtonClicked(); aboutMe = false; workAndEducation = false; projects = false; contactMe = true" ng-class='{active: contactMe}'>
+            <p class="selectionButtonText"> Contact Me </p>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="aboutMe" ng-if="aboutMePage == true">
+    <div class="aboutMeText">
+      <p class="paragraphText"> I am a Software Developer based in Vancouver, BC. </p>
+      <p class="paragraphText"> My area of expertise includes TypeScript, JavaScript, HTML and CSS. Despite the above, I've also built multiple applications with other languages, including but not limited to: Java, SQL and C++.</p>
+      <p class="paragraphText"> I really enjoy learning new technology. Right now I am learning how to write native mobile apps in React. Other than coding, I also like to solve problems that are related to algorithms and data structures. </p>
+    </div>
+  </div>
+
+  <div class="aboutMe" ng-if="workAndEducation == true">
+    <div class="aboutMeText">
+      <p class="paragraphText"> I am currently working as a Software Developer at Bing Han Canada. </p>
+      <p class="paragraphText"> My main duties include working on the e-Commerce Mobile App in Angular 2 with Ionic 2, the shopping experience in Bing Han's main webiste in Angular 2, and the admin website in both Angular 2 and AngularJS. </p>
+      <p class="paragraphText"> I graduated from the University of British Columbia in 2016 with a Bachelor of Science in Computer Science. My main focuses at school were on Software Development, Design Patterns and Database Administration</p>
+    </div>
+  </div>
+
+  <div class="projects" ng-if="projects == true">
+
+    <div class="col-md-12 photosColumn">
+      <div class="col-md-4">
+        <div class="col-sm-12 thumbnail">
+          <img src="http://res.cloudinary.com/ddthkwohq/image/upload/e_grayscale/v1487228541/DSC05337_fvejvm.jpg" class="img-responsive projectPhotos">
+          <div class="caption">
+            <h2 class="photoTitle"> Foodie </h2>
+            <h5 class="photoDesc"> Locate Restaurants Around You </h5>
+          </div>
+        </div>
+        
+        <div class="projectDescription">
+          <div class="descriptionText">
+           <h4 class="appSummary">Looking for restaurants around you? Foodie's got your back</h4>
+           <h5 class="featuresInclude"> Features of Foodie includes: </h5>
+           <ul>
+             <li> Locating nearby restaurants of your location</li>
+             <li> Sorting restaurants by cuisine</li>
+             <li> Uploading and viewing food photos of the restaurant</li>
+             <li> Saving favorite restaurants in profiles for future reference</li>
+           </ul>
+           </div>
+        </div>
+        
+        
+      </div>
+
+
+      <div class="col-md-4">
+        <div class="col-sm-12 thumbnail">
+          <img src="http://res.cloudinary.com/ddthkwohq/image/upload/e_grayscale/v1487485559/DSC05575_jcga53.jpg" class="img-responsive projectPhotos">
+          <div class="caption">
+            <h2 class="photoTitle"> Kontribute </h2>
+            <h5 class="photoDesc"> Event Planning Made Easy </h5>
+          </div> 
+        </div>
+        
+       <div class="projectDescription">
+          <div class="descriptionText">
+           <h4 class="appSummary">Kontribute allows users to easily organize their events by providing extensive planning tools</h4>
+           <h5 class="featuresInclude"> Features of Kontribute includes: </h5>
+           <ul>
+             <li> Private and public events</li>
+             <li> Event partipants voting on decisions</li>
+             <li> Hosts assigning items for guests to bring</li>
+             <li> Event participants take on responsibilities created by hosts</li>
+           </ul>
+           </div>
+        </div>
+        
+        
+      </div>
+
+      <div class="col-md-4">
+        <div class="col-sm-12 thumbnail">
+          <img src="http://res.cloudinary.com/ddthkwohq/image/upload/e_grayscale/v1487314621/DSC05383_fumeoj.jpg" class="img-responsive projectPhotos">
+          <div class="caption">
+            <h2 class="photoTitle"> Team Rocket </h2>
+            <h5 class="photoDesc"> Supermarket Simulation System </h5>
+          </div>
+        </div>
+        
+        <div class="projectDescription">
+          <div class="descriptionText">
+           <h4 class="appSummary">Team Rocket simulates a supermarket database system that allows users to check prices and quantities of items.</h4>
+           <h5 class="featuresInclude"> Features of Team Rocket includes: </h5>
+           <ul>
+             <li> Tracking item details - quantity and price.</li>
+             <li> Different permissions for different level of users, managers can edit price, consumers can only view</li>
+             <li> Removing and adding items into the database system</li>
+           </ul>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="contactMe" ng-if="contactMe == true">
+    <!--       <p> Fill in the form below and I promise I will get back to you as soon as possible!</p>
+      
+      <form id='contactForm' autocomplete='off' class="contactMeForm">
+        <div class="col-md-12">
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-1">
+            <p> Name </p> <br>
+            <p> Email</p> <br>
+            <p> Message </p>
+          </div>
+          <div class="col-md-3">
+              <input type="text" class="contactTextBox" name="name" ng-model='contact.name'> <br>
+              <input type="text" class="contactTextBox" name="email" ng-model='contact.email'> <br>
+               <textarea class="contactTextBox messageBox" name="message" ng-model='contact.message'></textarea> <br>
+          </div>
+          <div class="col-md-4">
+          </div>
+        
+        </div>
+
+      </form> -->
+
+    <p class="email"> Send an email to <br> me@christopherpang.net </p>
+    <p class="promise"> I promise I will get back to you as soon as possible!</p>
+
+  </div>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100' rel='stylesheet'>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel='stylesheet' href='main.css'>
+
+  <script src = 'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js'></script>
+  <script src = 'controller.js'></script>
