@@ -43,7 +43,6 @@ app.controller('ChrisController', function($scope, $timeout) {
   
   
   
-  
   $scope.contactButtonClicked = function(){
     $scope.homePage = false;
     $scope.aboutMePage = false;
@@ -51,6 +50,16 @@ app.controller('ChrisController', function($scope, $timeout) {
     $scope.contactMe = true;
     $scope.projects = false;
   }
+
+  $scope.backToHome = function(){
+    $scope.homePage = true;
+    $scope.aboutMePage = false;
+    $scope.aboutMe = true;
+    $scope.workAndEducation = false;
+    $scope.projects = false;
+    $scope.contactMe = false;
+  }
+  
   
   
 })
