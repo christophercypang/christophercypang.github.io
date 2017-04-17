@@ -65,7 +65,7 @@ body {
 
 .nameHeader{
   font-size: 60px;
-  font-weight: 100;
+  font-weight: 300;
   word-break: break-all;
   hyphens: auto;
 }
@@ -121,13 +121,13 @@ body {
 
 .selectionButtonText{
   font-size: 18px;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 .paragraphText{
   margin-bottom: 30px;
   letter-spacing: 1px;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 
@@ -222,7 +222,7 @@ body {
   margin-left: 5%;
   width: 95%;
   font-family: 'Lato';
-  font-weight: 100;
+  font-weight: 300;
 }
 
 .appSummary{
@@ -230,19 +230,7 @@ body {
 }
 
 .featuresInclude{
-  font-weight: 100;
-}
-
-
-.headerBarName{
-  background: none;
-  border: none;
-}
-
-.headerBarName:active{
-  color: #FF8C00;
-  transition: all 1s;
-  outline: 0;
+  font-weight: 300;
 }
 
 .caption {
