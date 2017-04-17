@@ -233,6 +233,18 @@ body {
   font-weight: 300;
 }
 
+.headerBarName{
+  background: none;
+  border: none;
+}
+
+.headerBarName:active{
+  color: #FF8C00;
+  transition: all 1s;
+  outline: 0;
+}
+
+
 .caption {
   color: #efefef;
   text-align: center;
